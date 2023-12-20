@@ -1,0 +1,95 @@
+\section{Purpose}
+As the software industry grows, training better developers is becoming more and more important. Traditionally, developers are trained solely in theory and then thrust into working on a whole complex project without any previous practice. That is what code katas try to tackle. Code katas are short exercises that can be completed in minutes. Some involve programming while others involve thinking about the issues behind programming. In general, code katas are unlikely to have a single correct answer, but the main point of the kata is what you learn along the way.
+CodeKataBattle (CKB) is a new platform where Educators can create tournaments comprising multiple battles. Each battle consists of one particular code kata and aims to develop several skills. The idea is that students compete in these tournaments in teams to gain hands-on experience and improve their software development skills. The main goals of the platform are the following:
+
+\subsection{Goals}
+\begin{enumerate}[label={[G\arabic*]}]
+    \item Educators create code kata battles 
+    \item Students compete in multiple tournaments in teams
+    \item Students receive performance feedback after each battle assessment%Students are assessed and receive feedback about their performance in each battle
+\end{enumerate}
+
+\section{Scope}
+In this section, we will try to identify CKB plataform domain. 
+There are to main users that interact with the system: Educators and students.
+
+Educators are the one who create the tournaments which consist of several battles grouped by context. For each battle, they will have to provide not only the code kata, but also the number of allowed participants and a deadline for both registration and submission. Another important feature is that they can allow other colleagues to add new battles to the tournament. In addition, to make the tournament a competition, they have to establish the scoring criteria.
+Lastly, for each tournament Educators will create badges which will be assigned to each students who fulfill some specific rule indicated into the badge itself.
+
+Students will be able to enrol in one of these tournaments in groups. Later, the platform will notify them when the competition starts and provide them with the repository with all the code necessary for the kata. Students have to fork this repository, and then can start working in the solution. They will also have to set a Github action\footnote{We use the term action to match the assigment however we think that it should be WebHook} so every push they commit to the repository during the competition is accounted for the computation of their score. Finally, after the deadline, the systems elaborate a rank considering their best score and the manual evaluation performed by the educator.
+\subsection{World Phenomena}
+
+
+\begin{enumerate}[label={[WP\arabic*]}]
+    \item Educators think of a new kata, code the automation  scripts and crate a test suite for the battle
+    \item Students create a Github account
+    \item Students fork the repository of the code kata provided
+
+    \item Students code the kata in their preferred IDE and commit to their repository
+    \item Educators think of a proper criteria to evaluate students work
+\end{enumerate}
+\subsection{Shared Phenomena}
+ \textbf{World controlled}
+\begin{enumerate}[label={[SP\arabic*]}]
+    \item Students set up an automated workflow through github actions
+    \item Educators create tournaments, battles and badges. 
+    \item Students invite others to join their team
+    \item A member of the team register his team to participate in a tournament
+    \item GitHub informs the CKB platform about new pushes in the students repository
+    \item Educators assign their personal evaluation once the submission deadline expires
+    
+ \textbf{Machine controlled}
+
+  \item The system creates a GitHub repository and send the link to the students belonging to teams enrolled to a specific battle after the registration deadline.
+  \item The system updates the score evaluation as soon a new push is performed
+  \item The system assigns a badge to the students who satisfies the predefined rules and the students are able to see it
+\end{enumerate}
+
+\section{Definitions, Acronyms, Abbreviations}
+\subsection{Definitions}
+\begin{enumerate} [label=\textbullet]
+    \item \textbf{Static analysis tool} :Method of debugging that is done by automatically examining the source code without having to execute the program ensuring that is  compliant, safe, and secure.
+    \item \textbf{Dynamic analysis tool} :Process of testing and evaluating a program thanks to running a test on the code.
+    \item \textbf{OAuth Access Token} :An OAuth Access Token is a string that the OAuth client uses to make requests to the resource server.
+    \item \textbf{WebHook} :A webhook is an HTTP-based callback function that allows lightweight, event-driven communication between 2 application programming interfaces (APIs). In this case it lets communication between Code Kata Battle platform and GitHub.
+    \item \textbf{Consolidation} : Is a phase that occur at the end of a tournament where the educator can decide to add a manual evaluation.
+\end{enumerate}
+\subsection{Acronyms}
+    \begin{enumerate}[label=\textbullet]
+        \item CKB: Code kata battle;
+        \item UI: User Interface;
+        \item UML: Unified Modelling Language.
+    \end{enumerate}
+
+\subsection{Abbreviations}
+\begin{enumerate}[label=\textbullet]
+    \item G*: goal
+    \item WP*: world phenomena
+    \item SP*: shared phenomena
+    \item R*: functional requirement
+    \item UC*: use case
+\end{enumerate}
+    
+\section{Revision history}
+        \begin{enumerate}[label=\textbullet]
+            \item Version 1.0 (20/12/2023)
+        \end{enumerate}
+\pagebreak
+\section{Reference Documents}
+The document is based on the following materials:
+    \begin{enumerate}[label=\textbullet]
+        \item The specification of the RASD and DD assignment of the Software Engineering II course a.a. 2023/24
+        \item Slides of the course on WeBeep
+    \end{enumerate}
+
+\section{Document Structure}
+
+    \begin{enumerate}[label=\arabic*., align=left]
+        \item \textbf{Introduction: }it aims to give a brief description of the project. In particular it’s focused on the reasons and the goals that are going to be achieved with its development;
+        \item \textbf{Overall Description: }it is an high-level description of how the system works with a detailed explanation of the phenomena that involve the world,the machine or both,there is also the domain description with its assumptions;
+        \item \textbf{Specific Requirements: }in this section there is a detailed  analysis of the requirements needed to achieve the goals.Moreover, it contains more information useful for developers (i.e constraints about HW and SW);
+        \item \textbf{Formal analysis: }it's a formal description of the world phenomena by the means of Alloy;
+        \item \textbf{Effort spent: }it shows the time spent to realize this document organized by section;
+         \item \textbf{References: }it contains the references to any documents and software used to write this paper.
+        
+    \end{enumerate}
