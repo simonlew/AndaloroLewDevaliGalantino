@@ -106,29 +106,29 @@ The \textit{In progress} state represents the state in which the deadline for th
 
 \section{Product functions}
 \subsubsection{Sign up and log in}
-Sign-up is available to all users who want to subscribe to the platform. When a new user opens the platform, he will press the button 'Sign-in'. The user will then be redirected to GitHub \footnote{We decide to require users to use their GitHub account to sign. We already required students to have one to participate in the tournament, and this simplifies the process of checking who submitted the code, as each user is linked to one GitHub account. Also this decision could in the future allow to seamlessly add more functionalities,  such as creating the web-hooks or forking the kata automatically and others that will ease the work of educators as well} where they are required to log in or create an account in order to link their GitHub account with our platform. Once this operation is completed, the platform will ask the user extra information such as username so that the platform can create the user profile. Once the profile is created, the system allows the user to log in to the platform for the first time using his GitHub account.\cite{githubOAuth}
+Sign-up is available to all users who want to subscribe to the platform. When a new user opens the platform, he will press the button 'Sign-in'. The user will then be redirected to GitHub \footnote{We decide to require users to use their GitHub account to sign. We already required students to have one to participate in the tournament, and this simplifies the process of checking who submitted the code, as each user is linked to one GitHub account. Also this decision could in the future allow us to seamlessly add more functionalities,  such as creating the web-hooks or forking the kata automatically and others that will ease the work of educators as well} where they are required to log in or create an account in order to link their GitHub account with our platform. Once this operation is completed, the platform will ask the user extra information, such as a username, so that the platform can create the user profile. Once the profile is created, the system allows the user to log into the platform for the first time using his GitHub account.\cite{githubOAuth}
 
 \subsubsection{Tournament and battles management}
-This function is only available to the educator. Their role is to create a tournament which consist of several battles that are related by the same topic. The first creator of the tournament allows his colleagues to contribute to the creation of the tournament by giving them the permission to add, modify or delete battles for that tournament.
-The educator should provide students with the necessary materials to do the kata and he should also define the minimum and maximum number of students allowed for the battle. Finally, he should specify the deadlines for both registration to the battle and final submission of the code.
+This function is only available to the educator. Their role is to create a tournament which consist of several battles that are related by the same topic. The first creator of the tournament allows his colleagues to contribute to the creation of the tournament by giving them the permission to add, modify, or delete battles for that tournament.
+The teacher should provide the students with the necessary materials to do the kata and should also define the minimum and maximum number of students allowed for the battle. Finally, he should specify the deadlines for both registration to the battle and final submission of the code.
 
 \subsubsection{Teams creation}
-This function is available to all student who wants to create a team and join a battle. Once the team leader signed up for the battle, it has the possibility to share an invitation link to other registered students. The students who received the invitation link can join the team-leader and subscribe to the battle.
+This function is available to all student who wants to create a team and join a battle. Once the team leader has signed up for the battle, it has the possibility to share an invitation link with other registered students. The students who received the invitation link can join the team-leader and subscribe to the battle.
 
 \subsubsection{Scoring and ranking}
-This function is available to every educator who wants to score and rank a group of students for his abilities in coding. after a battle the educator has the possibility to manually evaluate the team that has uploaded the code based on some criteria.
+This function is available to any educator who wants to score and rank a group of students for their coding abilities. after a battle the educator has the possibility to manually evaluate the team that has uploaded the code based on some criteria.
 
 \subsubsection{Badges}
 This function allows educator to creates badges which are a reward for students achievements. The criteria to assign the badges are decided by the educator during the tournament creation.
-Thanks to this function every user can view the badges collected by each student by visiting their profile.
+Thanks to this function, every user can view the badges collected by each student by visiting their profile.
 
 \subsubsection{Tournament and battles participation}
-The students that are registered to the platform will receive a notification.therefore,they are able to subscribe to the tournament after the subscription they will be informed of every incoming battle.
+The students that are registered to the platform will receive a notification. Therefore, they can subscribe to the tournament after registering and will be informed of every incoming battle.
 For what concerns each battle the students can form a team by using the platform they should create a repository on github if they do not create it, the platform will create it after the registration deadline.Then, the students have to fork the repository and they can start working on their project creating a workflow on github.Every push triggers the platform that starts doing the tests
 
 \subsubsection{Tournament and battles consolidation}
 This function allows the system to evaluate the code pushed by each team and assign it a score. This score is updated every time a new push is made into the repository.
-When the battle ends, the educator who created the battle has the possibility to manually evaluate the code done by the teams for that battle by going through the sources implemented by the students. This phase is called consolidation because right after the manual evaluation it is calculated the final score of the battle and all students who participates to it are notified about the ranking.
+When the battle ends, the educator who created the battle has the possibility to manually evaluate the code done by the teams for that battle by going through the sources implemented by the students. This phase is called consolidation because right after the manual evaluation the final score of the battle is calculated and all students who participate to it are notified about the ranking.
 
 \section{User Characteristics}
 There are mainly two types of user that interact with the platform: student and educator.
@@ -137,7 +137,7 @@ There are mainly two types of user that interact with the platform: student and 
 The student  is able to register and login to the platform and is also allowed to participate to a tournament after the tournament if his performances will be good he will receive a badge based on the rules that he fulfilled
 
 \subsection{Educator}
-The educator is a user that is able to create a tournament and the battle inside of it.This type of user is also able to evaluate the students after the battle and to create some badge that will be assigned to students who had the best performances.
+The educator is a user who can create a tournament and the battle inside of it.This type of user can also evaluate students after the battle and create a badge that will be assigned to students who had the best performances.
 
 
 
@@ -145,10 +145,10 @@ The educator is a user that is able to create a tournament and the battle inside
 \section{Assumptions, dependencies and constraints}
 
 \subsection{Regulatory policies}
-The CKB application asks for user personal GitHub account information. GitHub will not be used for commercial purposes. Personal information will be processed in compliance with the GPDR.
+The CKB application asks for the GitHub account information. GitHub will not be used for commercial purposes. Personal information will be processed in compliance with the GPDR.
 
 \subsection{Domain Assumptions}
-The following are assumptions made for the domain. They are properties or conditions that the system will take for granted.They must be checked to ensure a correct platform behaviour
+The following assumptions are made for the domain. They are properties or conditions that the system will take for granted.They must be checked to ensure a correct platform behaviour
 \begin{enumerate}[label={[D\arabic*]}]
 
     \item User must have a reliable internet connection
