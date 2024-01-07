@@ -1,0 +1,64 @@
+\section{Purpose}
+As the software industry continues to expand, it is becoming increasingly important to train developers more effectively. Traditionally, developers are taught theory and then immediately put to work on a complex project without any prior experience. Code katas are short exercises that can be completed in a few minutes and are designed to address this issue. These exercises can involve programming or simply thinking about the issues behind programming. Code katas do not have a single correct answer, but the main point is to learn something from the experience. CodeKataBattle (CKB) is a platform where educators can create tournaments with multiple battles. Each battle is a code kata that is designed to develop various skills. The idea is that students compete in these tournaments in teams to gain practical experience and improve their software development abilities. 
+\section{Scope}
+As mentioned in the RASD, there are two main users that interact with the system: Educators and Students. Educators are responsible for creating tournaments, which consist of multiple battles grouped by context. For each battle, they must provide a code kata, the number of participants allowed, and a deadline for both registration and submission. Additionally, Educators can allow other colleagues to add new battles to the tournament. To make the tournament a competition, they must also establish the scoring criteria. Lastly, Educators will create badges which will be assigned to each student who meets the criteria indicated in the badge. Students can join one of these tournaments in groups. The platform will then notify them when the competition begins and provide them with a repository containing all the code necessary for the kata. Students must fork this repository and then start working on the solution. They must also set up a GitHub action so that every push they make to the repository during the competition is counted towards their score. Finally, after the deadline, the system will generate a ranking based on their best score.score and the manually evaluation performed by the educator.
+
+\section{Definitions, Acronyms, Abbreviations}
+\subsection{Definitions}
+\begin{enumerate} [label=\textbullet]
+    \item \textbf{Static analysis tool} :Method of debugging that is done by automatically examining the source code without having to execute the program ensuring that is  compliant, safe, and secure.
+    \item \textbf{Dynamic analysis tool} :Process of testing and evaluating a program thanks to running a test on the code.
+    \item \textbf{OAuth Access Token} :An OAuth Access Token is a string that the OAuth client uses to make requests to the resource server.
+    \item \textbf{WebHook} :A webhook is an HTTP-based callback function that allows lightweight, event-driven communication between 2 application programming interfaces (APIs). In this case it lets communication between Code Kata Battle platform and GitHub.
+    \item \textbf{Consolidation} : Is a phase that occurs at the end of a tournament where the educator can decide to add a manual evaluation.
+\end{enumerate}
+\subsection{Acronyms}
+    \begin{enumerate}[label=\textbullet]
+        \item CKB: Code kata battle
+        \item UI: User Interface
+        \item UML: Unified Modelling Language
+        \item DB: Database
+        \item API: Application Programming Interface
+        \item DBMS: Database Management System
+        \item RDBMS: Relational Database Management System
+    \end{enumerate}
+
+\subsection{Abbreviations}
+\begin{enumerate}[label=\textbullet]
+    \item G*: goal
+    \item WP*: world phenomena
+    \item SP*: shared phenomena
+    \item R*: functional requirement
+    \item UC*: use case
+    \item UI: user interface
+\end{enumerate}
+    
+\section{Revision history}
+The following are the revision steps made by the team during the RASD development:
+        \begin{enumerate}[label=\textbullet]
+            \item Version 1.0 ( 9 December 2023);
+            
+        \end{enumerate}
+        
+\section{Reference Documents}
+The document is based on the following materials:
+    \begin{enumerate}[label=\textbullet]
+        \item The specification of the RASD and DD assignment of the Software
+              Engineering II course, held by professor Matteo Rossi, Elisabetta Di Nitto and Matteo Camilli at the Politecnico di Milano, A.Y 2022/2023;
+        \item Slides of Software Engineering 2 course on WeBeep;
+    \end{enumerate}
+
+\section{Document Structure}
+\begin{enumerate}[label=\arabic*., align=left]
+        \item \textbf{Introduction: }it aims to give a brief description of the project. In particular it’s focused on the reasons and the goals that are going to be achieved with its development, as previously explained in the RASD;
+        \item \textbf{Architectural Design: }: This part of the document describes at different levels of granularity how the architecture is designed;
+        \item \textbf{User Interface Design: }
+        This section shows the wire frame that constitutes the platform UI;
+        \item \textbf{Requirements Traceability: }in this section it is explained how the goals defined in the previous document are satisfied by the interaction between the requirements and the component described in this document. 
+        \item \textbf{Implementation, Integration and Test Plan: }this section provides a description of the implementation integration and testing details, useful for the developers and producer of the platform;
+        \item \textbf{Effort Spent: }shows the effort spent to write this document
+         \item \textbf{Bibliography: }it contains the references to any documents and software used to write this paper.
+        
+    \end{enumerate}
+
+%what you write here is a comment that is not shown in the final text

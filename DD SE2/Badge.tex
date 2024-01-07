@@ -1,0 +1,29 @@
+For creating the rules for the badges in a simple and extendable way, we created the following grammar:
+
+\section{Grammar}
+$<\{E,T\},\{and, or, (, ), >,\geq,<,\leq,=,-,boolean\_var,numerical\_var,$
+
+$NUMBER\}, E, P>$
+
+where $P$ is:
+
+$E \rightarrow E$ ($and$|$or$) $T$ | $T$
+
+$T \rightarrow $ ($E$) 
+| ($not$)? $boolean\_var$ 
+| $numerical\_var$ (>|\geq|<|\leq|=) $NUMBER$
+
+\subsection{Examples}
+Example of $boolean\_var$: PARTICIPATED\_IN\_ALL\_BATTLES
+
+Example of $numerical\_var$: NUMBER\_OF\_COMMITS
+
+Rule example: 
+
+PARTICIPATED\_IN\_ALL\_BATTLES and NUMBER\_OF\_COMMITS > 0
+
+\subsection{Parsing and evaluation}
+First upon creation of the badge, the rule will be parsed to check if it is valid. Afterwards, when the tournament ends, it will be evaluated for every enrolled user with the appropriate values of all the $...\_var$ tokens.
+
+\section{Disclaimer}
+We have not established ways to create custom variables for users because it would be difficult to do so without violating encapsulation. However, we created this flexible grammar that will allow developers to easily add new variables. We will provide users with a large number of variables which will hopefully be enough, but of course any suggestion of adding new variables will be considered.

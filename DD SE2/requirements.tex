@@ -1,0 +1,392 @@
+In this section it is explained how the requirements defined in the RASD, map the design components explained in this document.
+    \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments& [R1] The System allows users\footnote{users is used to refer to students and educators} to register by providing their personal information (Full Name, etc.), a valid email address and a password.
+    
+    
+            [R2] The System allows registered user to log in \\
+            \hline
+             Components& WebApp
+
+             API
+
+             AuthenticationManager
+
+             AccountManager
+
+             Database
+             
+             GitHub\\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+
+    
+    \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments& \textbf{Tournament and battles management}
+             
+             
+             [R3] The System allows Educators to create/modify a battle upload the code kata (description and software project, including test cases and build automation scripts)
+
+             
+    [R4] The System allows to create/modify/terminate a tournament by selecting the existing battles, setting the minimum and maximum number of students per group, the registration and final submission deadline.
+
+    
+    [R5] The System allows an educator to give or deny permission to his colleagues to modify a tournament.
+    
+    
+    \textbf{Scoring and ranking}
+
+    
+    [R10] The system allows educators to define the scoring criteria for a specific battle which they have permissions to edit
+    
+    \textbf{Badges}
+    
+    [R12] Educators can create a badge and a set of rules associated with that badge
+    \\
+            \hline
+             Components& WebApp
+
+             API
+
+             
+             CompetitionStructureManager
+
+             
+             AuthenticationManager
+
+             AccountManager
+
+             Database
+             
+             GitHub\\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+        
+        \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments&\textbf{Tournament and battles management}
+
+             
+    [R6] The System must notify subscribed user about upcoming battles and deadlines. \\
+
+            \hline
+             Components&
+             CompetitionStructureManager
+
+             AccountManager
+             
+             AuthenticationManager
+
+             Database
+
+             GitHub
+             
+             NotificationManager
+             \\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+    
+    \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments&
+\textbf{Student's teams}
+
+[R7] The System allows students to create a team
+             
+    [R8] The System allows students to invite other students into one of their teams
+    
+    [R9] The System allows students to join a new team which they were invited \\
+            \hline
+             Components& WebApp
+
+             API
+
+             TeamManager
+             
+             
+             CompetitionStructureManager
+
+             AccountManager
+             
+             AuthenticationManager
+             
+             Database
+
+             GitHub\\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+
+    
+    
+    \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments&\textbf{Scoring and ranking}
+             
+             
+             [R11] The system maintains and computes the scores of each battle
+
+             \textbf{Tournament and battles consolidation}
+             
+             [R21] The system updates the personal tournament score for each student enrolled in the tournament right after the battle ends
+    
+    \\
+            \hline
+             Components& 
+             CompetitionEvaluationManager
+             
+             
+             CompetitionStructureManager
+             
+             
+             TeamManager
+             
+             
+             AccountManager
+             
+             Database\\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+    
+    
+    \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments&\textbf{Badges}
+             
+            
+    [R13] The system assigns the badges that are created by educators as a reward for the rules they fulfill
+    \\
+            \hline
+             Components& 
+             CompetitionEvaluationManager
+             
+             
+             CompetitionStructureManager
+             
+             
+             AccountManager
+             
+             Database\\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+
+    \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments&\textbf{Badges}
+             
+            
+    [R14] The system shows the badges that are assigned to students
+    \\
+            \hline
+             Components& 
+             WebApp
+
+             API
+             
+             
+             AccountManager
+             
+             AuthenticationManager
+             
+             Database
+
+             GitHub
+             \\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+
+    
+     \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments& \textbf{Tournament and battles participation}
+             
+             [R15] The System creates a repository on GitHub containing the code kata right after the registration deadline
+             
+    [R16] The system sends the link to all the enrolled students after creating the repository with the code kata
+             \\
+            \hline
+             Components& 
+             
+             CompetitionStructureManager
+
+             AccountManager
+
+             TeamManager
+             
+             Database
+
+             GitHub
+             
+             NotificationManager\footnote{Only for [R16]}
+             \\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+
+    \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments& \textbf{Tournament and battles participation}
+             
+             [R17] The System receives notifications from GitHub regarding the students registered repositories commits
+    
+    
+    [R18] The System pulls the repository after receiving a notification for that repository before the deadline of that battle
+             \\
+            \hline
+             Components& 
+             CompetitionEvaluationManager
+             
+             
+             CompetitionStructureManager
+
+             AccountManager
+
+             TeamManager
+             
+             Database
+
+             GitHub
+             \\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+
+    \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments&\textbf{Tournament and battles participation}
+             
+             
+             [R19] The System runs the appropriate test on the new code after every pull of the repository
+    
+    
+    [R20] The System calculate and update the team's score for that battle after rerunning the tests
+    
+             
+    \\
+            \hline
+             Components& 
+             CompetitionEvaluationManager
+
+             DynamicAnalyzer
+             
+             
+             CompetitionStructureManager
+             
+             
+             TeamManager
+             
+             Database
+             
+             StaticAnalysisTool\\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+
+    
+      \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments& \textbf{Tournament and battles consolidation}
+             
+             [R22] The system allows educators to manually evaluate the code after the deadline
+             
+    [R23] The system  allows educators to finish the consolidation stage after completely performing the manual evaluation
+    
+             
+    
+             
+    \\
+            \hline
+             Components& WebApp
+
+             API
+             
+             
+             AccountManager
+             
+             AuthenticationManager
+             
+             CompetitionEvaluationManager
+             
+             
+             CompetitionStructureManager
+             
+             
+             TeamManager
+             
+             Database
+
+             GitHub\\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+
+  \begin{table}[!h]
+        \centering
+        \begin{tabular}{ | m{6em} | m{30em} |} 
+            \hline
+             Requirments& \textbf{Tournament and battles consolidation}
+             
+    [R24] The system computes the final ranking of the tournament immediately after consolidation finishes
+    
+    [R25] The system  sends a notification about the tournament's termination to students 
+    \\
+            \hline
+             Components& 
+             AccountManager
+
+             AuthenticationManager
+
+             CompetitionEvaluationManager
+                          
+             CompetitionStructureManager
+             
+             TeamManager
+             
+             Database
+             
+             NotificationManager\footnote{Only for [R25]}\\
+             \hline
+        \end{tabular}
+        \label{tab:my_label}
+    \end{table}
+   
